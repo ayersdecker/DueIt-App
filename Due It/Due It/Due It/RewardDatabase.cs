@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Due_It
 {
+    public class TimeSlotDatabaseContext
+    {
+
+    }
+
     public class RewardDatabase
     {
             static SQLiteAsyncConnection Database;
@@ -32,16 +37,12 @@ namespace Due_It
                 return Database.Table<Reward>().Where(i => i.ID == id).FirstOrDefaultAsync();
             }
 
-            public Task<int> SaveItemAsync(Reward reward)
+            public async Task<int> SaveItemAsync(Reward reward)
             {
-                if (reward.ID != 0)
-                {
-                    return Database.UpdateAsync(reward);
-                }
-                else
-                {
-                    return Database.InsertAsync(reward);
-                }
+                await Database.CreateTableAsync<Reward>();
+                if (reward.ID == null)
+                    return await Database.InsertAsync(reward);
+                return await Database.UpdateAsync(reward);
             }
 
             public Task<int> DeleteItemAsync(Reward reward)

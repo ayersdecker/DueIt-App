@@ -20,7 +20,7 @@ namespace Due_It
         {
             InitializeComponent();
             Hold();
-            Hold2();
+            //Hold2();
         }
         void Hold()
         {
@@ -35,24 +35,24 @@ namespace Due_It
         {
             var rewardItem = new Reward
             {
-                ID = 1,
+                ID = null,
                 Name = "Test",
                 Description = "Reward Db Test"
             };
             reward = new RewardDatabase(); 
             await reward.SaveItemAsync(rewardItem);
-            GetRewards();
+            //GetRewards();
             AssignIt();
         }
 
         private async void GetRewards()
         {
-            rewards = await reward.GetItemsAsync();;
+            //rewards = await reward.GetItemsAsync();;
         }
 
         async void AssignIt()
         {
-            rewardsList = await new List<Reward>(rewards);
+            rewardsList = await reward.GetItemsAsync();
         }
     }
 }

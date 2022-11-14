@@ -33,3 +33,8 @@ C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\refint\Due It.dll
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.pdb
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\ref\Due It.dll
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\PreferencesPage.xaml.g.cs
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\RewardsPage.xaml.g.cs
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\SchedulePage.xaml.g.cs
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\SettingsPage.xaml.g.cs
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Timer.xaml.g.cs
