@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Text;
+using SQLite;
 using Xamarin.Forms;
 // Class: Block
 // Description: Used to Block off sections of time within Schedule OBJ 
@@ -10,7 +12,6 @@ namespace Due_It
     internal class Block
     {
 
-        
         // Holds different time periods selectable to block off different times for --> Used for repeatPeriod/RepeatPeriod
         string[] periods = new string[] {"Never", "Daily", "Weekly", "Monthly"};
 
@@ -33,5 +34,7 @@ namespace Due_It
                 if (repeatPeriod != value){ repeatPeriod = periods[0]; }
             }
         }
+
+
     }
 }

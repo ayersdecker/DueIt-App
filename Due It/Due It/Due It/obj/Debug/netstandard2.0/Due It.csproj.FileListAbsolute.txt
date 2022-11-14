@@ -13,3 +13,23 @@ C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.pdb
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\ref\Due It.dll
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\TodayPage.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\bin\Debug\netstandard2.0\Due It.deps.json
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\bin\Debug\netstandard2.0\Due It.dll
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\bin\Debug\netstandard2.0\Due It.pdb
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.csproj.AssemblyReference.cache
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\PreferencesPage.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\RewardsPage.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\SchedulePage.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\SettingsPage.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Timer.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\TodayPage.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.AssemblyInfoInputs.cache
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.AssemblyInfo.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.csproj.CoreCompileInputs.cache
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.dll
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\refint\Due It.dll
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.pdb
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\ref\Due It.dll
