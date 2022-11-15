@@ -19,17 +19,7 @@ namespace Due_It
         public TodayPage()
         {
             InitializeComponent();
-            Hold();
-            //Hold2();
-        }
-        void Hold()
-        {
             RunIt();
-        }
-        void Hold2()
-        {
-            GetRewards();
-            AssignIt();
         }
         async void RunIt()
         {
@@ -44,12 +34,6 @@ namespace Due_It
             //GetRewards();
             AssignIt();
         }
-
-        private async void GetRewards()
-        {
-            //rewards = await reward.GetItemsAsync();;
-        }
-
         async void AssignIt()
         {
             rewardsList = await reward.GetItemsAsync();
