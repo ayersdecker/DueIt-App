@@ -12,7 +12,6 @@ namespace Due_It
 {
     public partial class App : Application
     {
-        
         public App()
         {
             InitializeComponent();
@@ -20,6 +19,5 @@ namespace Due_It
             MainPage = new TodayPage();
 
         }
-        
     }
 }
