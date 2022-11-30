@@ -3729,18 +3729,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ayers\\.nuget\\packages\\": {},
+    "C:\\Users\\draye\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ayers\\Source\\Repos\\Due-It\\Due It\\Due It\\Due It.Android\\Due It.Android.csproj",
+      "projectUniqueName": "C:\\Users\\draye\\source\\repos\\Due-It\\Due It\\Due It\\Due It.Android\\Due It.Android.csproj",
       "projectName": "Due It.Android",
-      "projectPath": "C:\\Users\\ayers\\Source\\Repos\\Due-It\\Due It\\Due It\\Due It.Android\\Due It.Android.csproj",
-      "packagesPath": "C:\\Users\\ayers\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ayers\\Source\\Repos\\Due-It\\Due It\\Due It\\Due It.Android\\obj\\",
+      "projectPath": "C:\\Users\\draye\\source\\repos\\Due-It\\Due It\\Due It\\Due It.Android\\Due It.Android.csproj",
+      "packagesPath": "C:\\Users\\draye\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\draye\\source\\repos\\Due-It\\Due It\\Due It\\Due It.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3748,7 +3748,7 @@
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ayers\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\draye\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -3763,8 +3763,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "C:\\Users\\ayers\\Source\\Repos\\Due-It\\Due It\\Due It\\Due It\\Due It.csproj": {
-              "projectPath": "C:\\Users\\ayers\\Source\\Repos\\Due-It\\Due It\\Due It\\Due It\\Due It.csproj"
+            "C:\\Users\\draye\\source\\repos\\Due-It\\Due It\\Due It\\Due It\\Due It.csproj": {
+              "projectPath": "C:\\Users\\draye\\source\\repos\\Due-It\\Due It\\Due It\\Due It\\Due It.csproj"
             }
           }
         }
