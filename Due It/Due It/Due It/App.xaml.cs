@@ -2,7 +2,6 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using SQLite;
 using System.IO;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

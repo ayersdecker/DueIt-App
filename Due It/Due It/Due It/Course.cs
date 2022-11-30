@@ -9,5 +9,14 @@ namespace Due_It
     {
         [PrimaryKey, AutoIncrement]
         public int? ID { get; set; }
+
+        public Course()
+        {
+            ID = 0;
+        }
+        public Course(int? iD)
+        {
+            ID = iD;
+        }
     }
 }

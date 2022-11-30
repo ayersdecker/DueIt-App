@@ -21,6 +21,7 @@ namespace Due_It
         public TodayPage()
         {
             InitializeComponent();
+            LoadUp();
             CalendarLoad();
         }
         async void CalendarLoad()
@@ -29,21 +30,27 @@ namespace Due_It
             assignmentsToday = await database.GetAssignmentItemsAsync();
             coursesToday = await database.GetCourseItemsAsync();
             blocksToday = await database.GetBlockItemsAsync();
-            systemPropertiesToday = await database.GetSystemPropertiesItemsAsync();
+            //systemPropertiesToday = await database.GetSystemPropertiesItemsAsync();
                 
         }
-        async void RunIt()
+        async void LoadUp()
         {
+            var database = new Database();
+            await database.SaveAssignmentItemAsync(new Assignment());
+            await database.SaveCourseItemAsync(new Course());
+            await database.SaveBlockItemAsync(new Block());
+           // await database.SaveSystemPropertiesItemAsync(new SystemProperties());
+
             //var rewardItem = new Reward
             //{
             //    ID = null,
             //    Name = "Test",
             //    Description = "Reward Db Test"
             //};
-            //reward = new RewardDatabase(); 
+            //reward = new RewardDatabase();
             //await reward.SaveItemAsync(rewardItem);
             //GetRewards();
-            //AssignIt();
+            AssignIt();
         }
         async void AssignIt()
         {

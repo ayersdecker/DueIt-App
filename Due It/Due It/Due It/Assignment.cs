@@ -12,7 +12,7 @@ namespace Due_It
         [PrimaryKey, AutoIncrement]
         public int? ID { get; set; }
         public string Name { get; set; }
-        public Course Course { get; set; }
+        public int CourseID { get; set; }
         public DateTime Date { get; set; }
         public string Description { get; set; }
         public Priority Priority { get; set; }
@@ -21,6 +21,35 @@ namespace Due_It
         public TimeSlot SlotEnd { get; set; }
         public CompletionTime TimeRemaining { get; set; }
         public string Notes { get; set; } 
+        public Assignment()
+        {
+            ID = 0;
+            Name = "Not Available";
+            CourseID = 0;
+            Date = DateTime.Today;
+            Description = "Not Available";
+            Priority = Priority.none;
+            CompletionTime = CompletionTime.fifteen;
+            SlotStart = TimeSlot.ZeroFift;
+            SlotEnd = TimeSlot.ZeroThir;
+            TimeRemaining = CompletionTime.fifteen;
+            Notes = "N/A";
+
+        }
+        public Assignment(int? iD, string name, int course, DateTime date, string description, Priority priority, CompletionTime completionTime, TimeSlot slotStart, TimeSlot slotEnd, CompletionTime timeRemaining, string notes)
+        {
+            ID = iD;
+            Name = name;
+            CourseID = course;
+            Date = date;
+            Description = description;
+            Priority = priority;
+            CompletionTime = completionTime;
+            SlotStart = slotStart;
+            SlotEnd = slotEnd;
+            TimeRemaining = timeRemaining;
+            Notes = notes;
+        }
 
         public TimeSlot ChunkStart()
         {
