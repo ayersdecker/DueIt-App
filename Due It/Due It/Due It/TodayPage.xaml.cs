@@ -23,7 +23,7 @@ namespace Due_It
             InitializeComponent();
             CalendarLoad();
         }
-        async void CalendarLoad()0
+        async void CalendarLoad()
         {
             var database = new Database();
             assignmentsToday = await database.GetAssignmentItemsAsync();
