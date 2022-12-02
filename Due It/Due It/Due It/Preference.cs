@@ -4,7 +4,14 @@ using System.Text;
 
 namespace Due_It
 {
-    internal class Preference
+    public  class Preference
     {
+        public int? ID { get; set; }
+
+
+        public Preference()
+        {
+            ID = 0;
+        }
     }
 }

@@ -13,30 +13,48 @@ namespace Due_It
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TodayPage : ContentPage
     {
-        public Task<List<Reward>> rewards;
-        public List<Reward> rewardsList;
-        RewardDatabase reward;
+        public List<Assignment> assignmentsToday;
+        public List<Course> coursesToday;
+        public List<Block> blocksToday;
+        public List<SystemProperties> systemPropertiesToday;
+
         public TodayPage()
         {
             InitializeComponent();
-            RunIt();
+            LoadUp();
+            CalendarLoad();
         }
-        async void RunIt()
+        async void CalendarLoad()
         {
-            var rewardItem = new Reward
-            {
-                ID = null,
-                Name = "Test",
-                Description = "Reward Db Test"
-            };
-            reward = new RewardDatabase(); 
-            await reward.SaveItemAsync(rewardItem);
+            var database = new Database();
+            assignmentsToday = await database.GetAssignmentItemsAsync();
+            coursesToday = await database.GetCourseItemsAsync();
+            blocksToday = await database.GetBlockItemsAsync();
+            //systemPropertiesToday = await database.GetSystemPropertiesItemsAsync();
+                
+        }
+        async void LoadUp()
+        {
+            var database = new Database();
+            await database.SaveAssignmentItemAsync(new Assignment());
+            await database.SaveCourseItemAsync(new Course());
+            await database.SaveBlockItemAsync(new Block());
+           // await database.SaveSystemPropertiesItemAsync(new SystemProperties());
+
+            //var rewardItem = new Reward
+            //{
+            //    ID = null,
+            //    Name = "Test",
+            //    Description = "Reward Db Test"
+            //};
+            //reward = new RewardDatabase();
+            //await reward.SaveItemAsync(rewardItem);
             //GetRewards();
             AssignIt();
         }
         async void AssignIt()
         {
-            rewardsList = await reward.GetItemsAsync();
+          //  rewardsList = await reward.GetItemsAsync();
         }
     }
 }
