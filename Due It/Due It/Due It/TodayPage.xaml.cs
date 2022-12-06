@@ -30,7 +30,7 @@ namespace Due_It
             assignmentsToday = await database.GetAssignmentItemsAsync();
             coursesToday = await database.GetCourseItemsAsync();
             blocksToday = await database.GetBlockItemsAsync();
-            //systemPropertiesToday = await database.GetSystemPropertiesItemsAsync();
+            systemPropertiesToday = await database.GetSystemPropertiesItemsAsync();
                 
         }
         async void LoadUp()
@@ -39,7 +39,7 @@ namespace Due_It
             await database.SaveAssignmentItemAsync(new Assignment());
             await database.SaveCourseItemAsync(new Course());
             await database.SaveBlockItemAsync(new Block());
-           // await database.SaveSystemPropertiesItemAsync(new SystemProperties());
+            await database.SaveSystemPropertiesItemAsync(new SystemProperties());
 
             //var rewardItem = new Reward
             //{
@@ -50,11 +50,11 @@ namespace Due_It
             //reward = new RewardDatabase();
             //await reward.SaveItemAsync(rewardItem);
             //GetRewards();
-            AssignIt();
+            //AssignIt();
         }
-        async void AssignIt()
-        {
+        //async void AssignIt()
+        //{
           //  rewardsList = await reward.GetItemsAsync();
-        }
+        //}
     }
 }

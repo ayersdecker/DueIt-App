@@ -20,7 +20,10 @@ namespace Due_It
         {
             ID = 0;
         }
-
+        public Block(int? iD)
+        {
+            ID = iD;
+        }
     }
  
 }

@@ -175,7 +175,7 @@ namespace Due_It
         /// <returns>Task<int></returns>
         public async Task<int> SaveSystemPropertiesItemAsync(SystemProperties systemProperties)
         {
-            await connection.CreateTableAsync<Reward>();
+            await connection.CreateTableAsync<SystemProperties>();
             if (systemProperties.ID == null)
                 return await connection.InsertAsync(systemProperties);
             return await connection.UpdateAsync(systemProperties);

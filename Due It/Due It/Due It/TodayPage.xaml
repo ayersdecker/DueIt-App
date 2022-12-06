@@ -3,10 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Due_It.TodayPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Today's Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <!-- Portrait Orientation of Lading Page of Due It Application -->
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Today"
+                   TextColor="Black"
+                   FontSize="30"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   />
+            <Rectangle BackgroundColor="LightGray" 
+                       Grid.Column="1"
+                       Grid.Row="3"/>
+            <ScrollView
+                Grid.Row="3"
+                Grid.Column="1"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

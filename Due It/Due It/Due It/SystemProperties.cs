@@ -9,12 +9,14 @@ namespace Due_It
     {
         [PrimaryKey, AutoIncrement]
         public int? ID { get; set; }
-        public Preference Preference { get; set; }
 
         public SystemProperties()
         {
             ID = 0;
-            Preference = new Preference();
+        }
+        public SystemProperties(int? iD)
+        {
+            ID = iD;
         }
     }
 }
