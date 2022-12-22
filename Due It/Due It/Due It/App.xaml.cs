@@ -15,7 +15,7 @@ namespace Due_It
         {
             InitializeComponent();
 
-            MainPage = new TodayPage();
+            MainPage = new NavigationPage( new TodayPage());
 
         }
     }

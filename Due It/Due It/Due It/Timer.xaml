@@ -2,11 +2,69 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Due_It.Timer">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+    <ContentPage.Content 
+        NavigationPage.HasBackButton="False"
+        Title="TimerPage">
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="2"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Timer"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Opacity=".75"
+                   FontSize="30"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   />
+            
+            <Button
+                x:Name="Home"
+                Text="Home"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Opacity=".75"
+                CornerRadius="10"
+                Grid.Row="4"
+                Grid.Column="1"
+                BackgroundColor="White"
+                Clicked="Home_Clicked"/>
+            <Button
+                x:Name="TimerBtn"
+                Text="Timer"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Opacity=".75"
+                CornerRadius="10"
+                Grid.Row="4"
+                Grid.Column="3"
+                BackgroundColor="LightGray"
+                Clicked="TimerBtn_Clicked"/>
+            <Button
+                x:Name="Settings"
+                Text="Settings"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Opacity=".75"
+                CornerRadius="10"
+                Grid.Row="4"
+                Grid.Column="5"
+                BackgroundColor="White"
+                Clicked="Settings_Clicked"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

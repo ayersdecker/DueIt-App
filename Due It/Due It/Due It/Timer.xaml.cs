@@ -12,9 +12,25 @@ namespace Due_It
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Timer : ContentPage
     {
+        
         public Timer()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+        }
+        private void Home_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TodayPage());
+        }
+
+        private void TimerBtn_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Timer());
+        }
+
+        private void Settings_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SettingsPage());
         }
     }
 }

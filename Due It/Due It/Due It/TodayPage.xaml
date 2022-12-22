@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Due_It.TodayPage">
-    <ContentPage.Content>
+    <ContentPage.Content
+        NavigationPage.HasBackButton="False"
+        Title="TodayPage">
         <!-- Portrait Orientation of Lading Page of Due It Application -->
         <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
@@ -10,25 +12,68 @@
                 <RowDefinition Height="45"/>
                 <RowDefinition Height="5"/>
                 <RowDefinition/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="2"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
                 <ColumnDefinition Width="10"/>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
             <Label Text="Today"
                    TextColor="Black"
+                   FontAttributes="Bold"
+                   Opacity=".75"
                    FontSize="30"
                    Grid.Column="1"
                    Grid.Row="1"
                    />
             <Rectangle BackgroundColor="LightGray" 
                        Grid.Column="1"
+                       Grid.ColumnSpan="5"
                        Grid.Row="3"/>
             <ScrollView
                 Grid.Row="3"
-                Grid.Column="1"/>
+                Grid.Column="1"
+                Grid.ColumnSpan="5"
+                />
+            <Button
+                x:Name="Home"
+                Text="Home"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Opacity=".75"
+                CornerRadius="10"
+                Grid.Row="4"
+                Grid.Column="1"
+                BackgroundColor="LightGray"
+                Clicked="Home_Clicked"/>
+            <Button
+                x:Name="Timer"
+                Text="Timer"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Opacity=".75"
+                CornerRadius="10"
+                Grid.Row="4"
+                Grid.Column="3"
+                BackgroundColor="White"
+                Clicked="Timer_Clicked"/>
+            <Button
+                x:Name="Settings"
+                Text="Settings"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Opacity=".75"
+                CornerRadius="10"
+                Grid.Row="4"
+                Grid.Column="5"
+                BackgroundColor="White"
+                Clicked="Settings_Clicked"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

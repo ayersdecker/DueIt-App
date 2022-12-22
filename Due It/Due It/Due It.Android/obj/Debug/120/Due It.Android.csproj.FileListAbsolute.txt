@@ -622,6 +622,24 @@ C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\st
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\55\jl\files.cache
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\63\jl\files.cache
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\69\jl\files.cache
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\75\jl\files.cache
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\79\jl\files.cache
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\85\jl\files.cache
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\93\jl\files.cache
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\99\jl\files.cache
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\104\jl\files.cache
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLite-net.dll
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLitePCLRaw.core.dll
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLitePCLRaw.lib.e_sqlite3.android.dll
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\System.Buffers.dll
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\System.Data.SQLite.dll
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\System.Memory.dll
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\bin\Debug\Due It.Android.dll
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\bin\Debug\Due It.Android.pdb
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\bin\Debug\com.companyname.due_it.apk
@@ -1264,21 +1282,3 @@ C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\st
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\55\jl\files.cache
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\63\jl\files.cache
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\69\jl\files.cache
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\75\jl\files.cache
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\79\jl\files.cache
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\85\jl\files.cache
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\93\jl\files.cache
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\99\jl\files.cache
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\lp\104\jl\files.cache
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLite-net.dll
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLitePCLRaw.batteries_v2.dll
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLitePCLRaw.core.dll
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLitePCLRaw.lib.e_sqlite3.android.dll
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\System.Buffers.dll
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\System.Data.SQLite.dll
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\System.Memory.dll
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\System.Runtime.CompilerServices.Unsafe.dll

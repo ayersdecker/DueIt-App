@@ -20,6 +20,7 @@ namespace Due_It
 
         public TodayPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             LoadUp();
             CalendarLoad();
@@ -31,7 +32,7 @@ namespace Due_It
             coursesToday = await database.GetCourseItemsAsync();
             blocksToday = await database.GetBlockItemsAsync();
             systemPropertiesToday = await database.GetSystemPropertiesItemsAsync();
-                
+
         }
         async void LoadUp()
         {
@@ -41,20 +42,21 @@ namespace Due_It
             await database.SaveBlockItemAsync(new Block());
             await database.SaveSystemPropertiesItemAsync(new SystemProperties());
 
-            //var rewardItem = new Reward
-            //{
-            //    ID = null,
-            //    Name = "Test",
-            //    Description = "Reward Db Test"
-            //};
-            //reward = new RewardDatabase();
-            //await reward.SaveItemAsync(rewardItem);
-            //GetRewards();
-            //AssignIt();
         }
-        //async void AssignIt()
-        //{
-          //  rewardsList = await reward.GetItemsAsync();
-        //}
+
+        private void Home_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TodayPage());
+        }
+
+        private void Timer_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Timer());
+        }
+
+        private void Settings_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SettingsPage());
+        }
     }
 }
