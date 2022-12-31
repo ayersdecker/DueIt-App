@@ -9,7 +9,7 @@
         <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="5"/>
-                <RowDefinition Height="45"/>
+                <RowDefinition Height="40"/>
                 <RowDefinition Height="5"/>
                 <RowDefinition/>
                 <RowDefinition Height="75"/>
@@ -24,12 +24,14 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
-            <Label Text="Today"
+            <Label x:Name="PageHeader"
+                    Text="Today"
                    TextColor="Black"
                    FontAttributes="Bold"
                    Opacity=".75"
                    FontSize="30"
                    Grid.Column="1"
+                   Grid.ColumnSpan="5"
                    Grid.Row="1"
                    />
             <Rectangle BackgroundColor="LightGray" 
@@ -39,8 +41,12 @@
             <ScrollView
                 Grid.Row="3"
                 Grid.Column="1"
-                Grid.ColumnSpan="5"
-                />
+                Grid.ColumnSpan="5">
+                
+                
+                
+                
+            </ScrollView>
             <Button
                 x:Name="Home"
                 Text="Home"

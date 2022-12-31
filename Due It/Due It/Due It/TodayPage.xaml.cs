@@ -23,7 +23,7 @@ namespace Due_It
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             LoadUp();
-            CalendarLoad();
+            //CalendarLoad();
         }
         async void CalendarLoad()
         {
@@ -32,7 +32,7 @@ namespace Due_It
             coursesToday = await database.GetCourseItemsAsync();
             blocksToday = await database.GetBlockItemsAsync();
             systemPropertiesToday = await database.GetSystemPropertiesItemsAsync();
-
+            
         }
         async void LoadUp()
         {
@@ -41,6 +41,7 @@ namespace Due_It
             await database.SaveCourseItemAsync(new Course());
             await database.SaveBlockItemAsync(new Block());
             await database.SaveSystemPropertiesItemAsync(new SystemProperties());
+            PageHeader.Text = DateTime.Now.ToString("M");
 
         }
 

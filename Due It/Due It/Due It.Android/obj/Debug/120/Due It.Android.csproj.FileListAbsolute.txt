@@ -690,6 +690,7 @@ C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\an
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\bin\base.zip
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\bin\com.companyname.due_it.aab
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\bin\com.companyname.due_it.apks
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\res\drawable\colors.webp
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\res\values\styles.xml
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\res\values\colors.xml
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
@@ -704,6 +705,8 @@ C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\re
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon.png
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\res\drawable\cityscape.gif
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\res\drawable\original.gif
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\uploadflags.txt
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\resolvedassemblies.hash
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\120\android\assets\Due It.Android.dll

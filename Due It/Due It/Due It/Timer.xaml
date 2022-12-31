@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Due_It.Timer">
+             x:Class="Due_It.Timer"
+             >
     <ContentPage.Content 
         NavigationPage.HasBackButton="False"
-        Title="TimerPage">
+        Title="TimerPage"
+        >
         <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="5"/>
@@ -25,7 +27,17 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
-            <Label Text="Timer"
+            <Image x:Name="BackgroundImg"
+                Source="cityscape.gif"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="7"
+                Grid.RowSpan="8"
+                IsAnimationPlaying="True"
+                Aspect="AspectFill"
+                IsVisible="false"/>
+            <Label x:Name="PageTitle"
+                   Text="Timer"
                    TextColor="Black"
                    FontAttributes="Bold"
                    Opacity=".75"
@@ -33,6 +45,8 @@
                    Grid.Column="1"
                    Grid.Row="1"
                    />
+            
+
             <Button x:Name="HourUpButton"
                 Text="+"
                 TextColor="Black"
@@ -94,7 +108,7 @@
                 Clicked="MinDownButton_Clicked"
                 />
             <Label x:Name="HourTime"
-                   Text="00:00"
+                   Text="{Binding stopwatchTime}"
                    TextColor="Black"
                    FontAttributes="Bold"
                    Opacity=".75"
@@ -103,7 +117,8 @@
                    Grid.ColumnSpan="5"
                    Grid.Row="4"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+                   VerticalOptions="Center"
+                   />
             <Label x:Name="SecondTime"
                    Text=".00"
                    TextColor="Black"
@@ -117,6 +132,7 @@
                    Grid.Row="4"
                    HorizontalOptions="Start"
                    VerticalOptions="Center"/>
+            
             
             <Button x:Name="StartPauseButton"
                 Text="Start"
@@ -158,12 +174,6 @@
                 />
                 
             
-            
-
-            
-            
-            
-            
             <Button x:Name="Home"
                 Text="Home"
                 TextColor="Black"
@@ -194,6 +204,7 @@
                 Grid.Column="5"
                 BackgroundColor="White"
                 Clicked="Settings_Clicked"/>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>
