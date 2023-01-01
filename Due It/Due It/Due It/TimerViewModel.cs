@@ -8,23 +8,27 @@ using System.Xml.Schema;
 
 namespace Due_It
 {
-    public class TimerViewModel
+    public class TimerViewModel : INotifyPropertyChanged
     {
         private int timerInterval;
+
 
         public int TimerInterval
         {
             get { return timerInterval; }
             set
             {
-                timerInterval = value; //OnPropertyChanged();
+                timerInterval = value;
+                OnPropertyChanged(nameof(timerInterval));
             }
         }
 
-		/*private void OnPropertyChanged()
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		private void OnPropertyChanged(string timer)
         {
-            throw new NotImplementedException();
-        }*/
+            PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(nameof(timer)));
+        }
 
 /* Link to stack overflow: https://stackoverflow.com/questions/3416903/stopwatch-that-counts-down-in-c-sharp */
 
