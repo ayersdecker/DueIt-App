@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Due_It.Timer"
-             >
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Due_It"
+             x:Class="Due_It.Timer">
+    <ContentPage.BindingContext>
+        <local:TimerViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content 
         NavigationPage.HasBackButton="False"
-        Title="TimerPage"
-        >
+        Title="TimerPage">
         <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="5"/>
@@ -45,8 +47,9 @@
                    Grid.Column="1"
                    Grid.Row="1"
                    />
+            <Label x:Name="hourCollect"/>
+            <Label x:Name="minuteCollect"/>
             
-
             <Button x:Name="HourUpButton"
                 Text="+"
                 TextColor="Black"
@@ -107,8 +110,9 @@
                 VerticalOptions="Start"
                 Clicked="MinDownButton_Clicked"
                 />
+            
             <Label x:Name="HourTime"
-                   Text="{Binding stopwatchTime}"
+                   Text="00:00"
                    TextColor="Black"
                    FontAttributes="Bold"
                    Opacity=".75"
@@ -117,8 +121,7 @@
                    Grid.ColumnSpan="5"
                    Grid.Row="4"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   />
+                   VerticalOptions="Center"/>
             <Label x:Name="SecondTime"
                    Text=".00"
                    TextColor="Black"

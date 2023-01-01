@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,8 +13,7 @@ namespace Due_It
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Timer : ContentPage
     {
-        Stopwatch stopwatch = new Stopwatch();
-        
+
 
         public Timer()
         {
@@ -80,7 +78,6 @@ namespace Due_It
                 Home.IsVisible = true;
                 TimerBtn.IsVisible = true;
                 Settings.IsVisible = true;
-                stopwatch.Stop();
             }
             else
             {
@@ -95,7 +92,6 @@ namespace Due_It
                 Home.IsVisible = false;
                 TimerBtn.IsVisible = false;
                 Settings.IsVisible = false;
-                stopwatch.Start();
             }
         }
         private void ClearButton_Clicked(object sender, EventArgs e)

@@ -20,8 +20,6 @@ C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\PreferencesPage.xaml.g.cs
-C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\RewardsPage.xaml.g.cs
-C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\SchedulePage.xaml.g.cs
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\SettingsPage.xaml.g.cs
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Timer.xaml.g.cs
 C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\TodayPage.xaml.g.cs
@@ -38,3 +36,6 @@ C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\SchedulePage.xaml.g.cs
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\SettingsPage.xaml.g.cs
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Timer.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AddAssignment.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AddCourse.xaml.g.cs
+C:\Users\ayers\Source\Repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AddEvent.xaml.g.cs

@@ -34,6 +34,7 @@
                    Grid.ColumnSpan="5"
                    Grid.Row="1"
                    />
+            <!--This space below is where the current assignments will go-->
             <Rectangle BackgroundColor="LightGray" 
                        Grid.Column="1"
                        Grid.ColumnSpan="5"
