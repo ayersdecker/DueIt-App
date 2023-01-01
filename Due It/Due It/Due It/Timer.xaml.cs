@@ -13,12 +13,15 @@ namespace Due_It
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Timer : ContentPage
     {
-
+        public int hourCount = 0;
+        public int minuteCount = 0;
 
         public Timer()
         {
+            
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+            
             
         }
         private void Home_Clicked(object sender, EventArgs e)
@@ -35,34 +38,22 @@ namespace Due_It
         }
         private void HourUpButton_Clicked(object sender, EventArgs e)
         {
-
+            hourCount++;
         }
         private void HourDownButton_Clicked(object sender, EventArgs e)
         {
-
-        }
-        private void HourUpButton_Clicked_1(object sender, EventArgs e)
-        {
-
+            hourCount--;
         }
         private void MinUpButton_Clicked(object sender, EventArgs e)
         {
-
+            minuteCount++;
         }
         private void MinDownButton_Clicked(object sender, EventArgs e)
         {
-
-        }
-        private void StartPauseButton_Clicked(object sender, EventArgs e)
-        {
-            StartPauseButton.Text = StartPauseButton.Text == "Start" ? "Pause" : "Start";
-            StartPauseButton.BackgroundColor = StartPauseButton.BackgroundColor == Color.Lime ? Color.LightYellow : Color.Lime;
-            if (StartPauseButton.Text != "Pause")
-                TimeSetVisibility(true); 
-            else
-                TimeSetVisibility(false);
+            minuteCount--;
             
         }
+        
         private void TimeSetVisibility(bool toggle)
         {
             if (toggle)
@@ -72,22 +63,24 @@ namespace Due_It
                 MinUpButton.IsVisible = true;
                 MinDownButton.IsVisible = true;
                 ClearButton.IsVisible = true;
-                SecondTime.IsVisible        = false;
-                StartPauseButton.Opacity    = 1;
+                StartButton.IsVisible = true;
+                PauseButton.IsVisible = false;
                 BackgroundImg.IsVisible = false;
                 Home.IsVisible = true;
                 TimerBtn.IsVisible = true;
                 Settings.IsVisible = true;
+                PageTitle.IsVisible = true;
             }
             else
             {
+                PageTitle.IsVisible = false;
                 HourUpButton.IsVisible = false;
                 HourDownButton.IsVisible = false;
                 MinUpButton.IsVisible = false;
                 MinDownButton.IsVisible = false;
                 ClearButton.IsVisible = false;
-                SecondTime.IsVisible        = true;
-                StartPauseButton.Opacity    = .25;
+                StartButton.IsVisible    = false;
+                PauseButton.IsVisible= true;
                 BackgroundImg.IsVisible = true;
                 Home.IsVisible = false;
                 TimerBtn.IsVisible = false;
@@ -97,6 +90,16 @@ namespace Due_It
         private void ClearButton_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private void PauseButton_Clicked(object sender, EventArgs e)
+        {
+            TimeSetVisibility(true);
+        }
+
+        private void StartButton_Clicked(object sender, EventArgs e)
+        {
+            TimeSetVisibility(false);
         }
     }
 }

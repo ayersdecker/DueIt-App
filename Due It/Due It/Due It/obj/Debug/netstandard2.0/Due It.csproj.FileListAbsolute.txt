@@ -60,3 +60,24 @@ C:\Users\msrey\Source\Repos\Due-It-D\Due It\Due It\Due It\obj\Debug\netstandard2
 C:\Users\msrey\Source\Repos\Due-It-D\Due It\Due It\Due It\obj\Debug\netstandard2.0\refint\Due It.dll
 C:\Users\msrey\Source\Repos\Due-It-D\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.pdb
 C:\Users\msrey\Source\Repos\Due-It-D\Due It\Due It\Due It\obj\Debug\netstandard2.0\ref\Due It.dll
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.csproj.AssemblyReference.cache
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AddAssignment.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AddCourse.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AddEvent.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\PreferencesPage.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\SettingsPage.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Timer.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\TodayPage.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.AssemblyInfoInputs.cache
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.AssemblyInfo.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.csproj.CoreCompileInputs.cache
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.dll
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\refint\Due It.dll
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Due It.pdb
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\bin\Debug\netstandard2.0\Due It.deps.json
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\bin\Debug\netstandard2.0\Due It.dll
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\bin\Debug\netstandard2.0\Due It.pdb
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\ref\Due It.dll

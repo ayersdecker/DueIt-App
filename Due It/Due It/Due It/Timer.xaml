@@ -63,7 +63,7 @@
                 Grid.ColumnSpan="3"
                 HorizontalOptions="Center"
                 VerticalOptions="End"
-                Clicked="HourUpButton_Clicked"
+                Command="{Binding AddHour}"  
                 />
             <Button x:Name="HourDownButton"
                 Text="-"
@@ -78,7 +78,7 @@
                 Grid.ColumnSpan="3"
                 HorizontalOptions="Center"
                 VerticalOptions="Start"
-                Clicked="HourDownButton_Clicked"
+                Command="{Binding SubHour}"
                 />
             <Button x:Name="MinUpButton"
                 Text="+"
@@ -93,7 +93,7 @@
                 Grid.ColumnSpan="3"
                 HorizontalOptions="Center"
                 VerticalOptions="End"
-                Clicked="MinUpButton_Clicked"
+                Command="{Binding AddMin}"
                 />
             <Button x:Name="MinDownButton"
                 Text="-"
@@ -108,11 +108,11 @@
                 Grid.ColumnSpan="3"
                 HorizontalOptions="Center"
                 VerticalOptions="Start"
-                Clicked="MinDownButton_Clicked"
+                Command="{Binding SubMin}"
                 />
-            
+
             <Label x:Name="HourTime"
-                   Text="{Binding TimerInterval}"
+                   
                    TextColor="Black"
                    FontAttributes="Bold"
                    Opacity=".75"
@@ -121,23 +121,38 @@
                    Grid.ColumnSpan="5"
                    Grid.Row="4"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+                   VerticalOptions="Center">
+                <Label.Text>
+                    <MultiBinding StringFormat="{}{0:00}{1}{2:00}">
+                        <Binding Path="HourTimerInterval"/>
+                        <Binding Path="Colon"/>
+                        <Binding Path="MinTimerInterval"/>
+                    </MultiBinding>
+                </Label.Text>
+            </Label>
             <Label x:Name="SecondTime"
-                   Text=".00"
+                   
                    TextColor="Black"
                    FontAttributes="Bold"
                    Margin="25,40,0,0"
-                   IsVisible="false"
+                   IsVisible="true"
                    Opacity=".75"
                    FontSize="30"
                    Grid.Column="5"
                    Grid.ColumnSpan="2"
                    Grid.Row="4"
                    HorizontalOptions="Start"
-                   VerticalOptions="Center"/>
-            
-            
-            <Button x:Name="StartPauseButton"
+                   VerticalOptions="Center">
+                <Label.Text>
+                    <MultiBinding StringFormat="{}{0:00}">
+                        <Binding Path="SecTimerInterval"/>
+                        
+                    </MultiBinding>
+                </Label.Text>
+            </Label>
+
+
+            <Button x:Name="StartButton"
                 Text="Start"
                 TextColor="Black"
                 BackgroundColor="Lime"
@@ -149,12 +164,35 @@
                 Grid.Row="5"
                 Grid.Column="1"
                 Grid.ColumnSpan="5"
+                IsVisible="true"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 CornerRadius="10"
                 BorderWidth="5"
                 BorderColor="Black"
-                Clicked="StartPauseButton_Clicked"
+                Command="{Binding StartToggle}"
+                Clicked="StartButton_Clicked"
+                />
+            <Button x:Name="PauseButton"
+                Text="Pause"
+                TextColor="Black"
+                BackgroundColor="Gray"
+                FontAttributes="Bold"
+                WidthRequest="200"
+                Margin="0,50,0,0"
+                Opacity=".25"
+                FontSize="30"
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="5"
+                IsVisible="false"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                BorderWidth="5"
+                BorderColor="Black"
+                Command="{Binding PauseToggle}"
+                Clicked="PauseButton_Clicked"
                 />
             <Button x:Name="ClearButton"
                 Text="Clear"
@@ -173,7 +211,7 @@
                 CornerRadius="10"
                 BorderWidth="5"
                 BorderColor="Black"
-                Clicked="ClearButton_Clicked"
+                Command="{Binding ClearToggle}"
                 />
                 
             
