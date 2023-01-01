@@ -21,9 +21,12 @@ namespace Due_It
             }
         }
 
-        /*private void OnPropertyChanged()
+		/*private void OnPropertyChanged()
         {
             throw new NotImplementedException();
         }*/
+
+/* Link to stack overflow: https://stackoverflow.com/questions/3416903/stopwatch-that-counts-down-in-c-sharp */
+
     }
 }
