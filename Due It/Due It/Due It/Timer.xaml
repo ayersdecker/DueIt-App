@@ -1,12 +1,251 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Due_It"
              x:Class="Due_It.Timer">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+    <ContentPage.BindingContext>
+        <local:TimerViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content 
+        NavigationPage.HasBackButton="False"
+        Title="TimerPage">
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition/>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="2"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="BackgroundImg"
+                Source="cityscape.gif"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.ColumnSpan="7"
+                Grid.RowSpan="8"
+                IsAnimationPlaying="True"
+                Aspect="AspectFill"
+                IsVisible="false"/>
+            <Label x:Name="PageTitle"
+                   Text="Timer"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Opacity=".75"
+                   FontSize="30"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   />
+            <Label x:Name="hourCollect"/>
+            <Label x:Name="minuteCollect"/>
+            
+            <Button x:Name="HourUpButton"
+                Text="+"
+                TextColor="Black"
+                BackgroundColor="White"
+                FontAttributes="Bold"
+                Margin="20,0,0,0"
+                Opacity=".75"
+                FontSize="40"
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Command="{Binding AddHour}"  
+                />
+            <Button x:Name="HourDownButton"
+                Text="-"
+                TextColor="Black"
+                BackgroundColor="White"
+                FontAttributes="Bold"
+                Margin="20,0,0,0"
+                Opacity=".75"
+                FontSize="50"
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Command="{Binding SubHour}"
+                />
+            <Button x:Name="MinUpButton"
+                Text="+"
+                TextColor="Black"
+                BackgroundColor="White"
+                FontAttributes="Bold"
+                Margin="0,0,20,0"
+                Opacity=".75"
+                FontSize="40"
+                Grid.Row="3"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Command="{Binding AddMin}"
+                />
+            <Button x:Name="MinDownButton"
+                Text="-"
+                TextColor="Black"
+                BackgroundColor="White"
+                FontAttributes="Bold"
+                Margin="0,0,20,0"
+                Opacity=".75"
+                FontSize="50"
+                Grid.Row="5"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Command="{Binding SubMin}"
+                />
+
+            <Label x:Name="HourTime"
+                   
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Opacity=".75"
+                   FontSize="80"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="5"
+                   Grid.Row="4"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                <Label.Text>
+                    <MultiBinding StringFormat="{}{0:00}{1}{2:00}">
+                        <Binding Path="HourTimerInterval"/>
+                        <Binding Path="Colon"/>
+                        <Binding Path="MinTimerInterval"/>
+                    </MultiBinding>
+                </Label.Text>
+            </Label>
+            <Label x:Name="SecondTime"
+                   
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Margin="25,40,0,0"
+                   IsVisible="true"
+                   Opacity=".75"
+                   FontSize="30"
+                   Grid.Column="5"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="4"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center">
+                <Label.Text>
+                    <MultiBinding StringFormat="{}{0:00}">
+                        <Binding Path="SecTimerInterval"/>
+                        
+                    </MultiBinding>
+                </Label.Text>
+            </Label>
+
+
+            <Button x:Name="StartButton"
+                Text="Start"
+                TextColor="Black"
+                BackgroundColor="Lime"
+                FontAttributes="Bold"
+                WidthRequest="200"
+                Margin="0,50,0,0"
+                Opacity=".75"
+                FontSize="30"
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="5"
+                IsVisible="true"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                BorderWidth="5"
+                BorderColor="Black"
+                Command="{Binding StartToggle}"
+                Clicked="StartButton_Clicked"
+                />
+            <Button x:Name="PauseButton"
+                Text="Pause"
+                TextColor="Black"
+                BackgroundColor="Gray"
+                FontAttributes="Bold"
+                WidthRequest="200"
+                Margin="0,50,0,0"
+                Opacity=".25"
+                FontSize="30"
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="5"
+                IsVisible="false"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                BorderWidth="5"
+                BorderColor="Black"
+                Command="{Binding PauseToggle}"
+                Clicked="PauseButton_Clicked"
+                />
+            <Button x:Name="ClearButton"
+                Text="Clear"
+                TextColor="Black"
+                BackgroundColor="OrangeRed"
+                FontAttributes="Bold"
+                WidthRequest="200"
+                Margin="0,0,0,50"
+                Opacity=".75"
+                FontSize="30"
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="5"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                CornerRadius="10"
+                BorderWidth="5"
+                BorderColor="Black"
+                Command="{Binding ClearToggle}"
+                />
+                
+            
+            <Button x:Name="Home"
+                Text="Home"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Opacity=".75"
+                CornerRadius="10"
+                Grid.Row="6"
+                Grid.Column="1"
+                BackgroundColor="White"
+                Clicked="Home_Clicked"/>
+            <Button x:Name="TimerBtn"
+                Text="Timer"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Opacity=".75"
+                CornerRadius="10"
+                Grid.Row="6"
+                Grid.Column="3"
+                BackgroundColor="LightGray"
+                Clicked="TimerBtn_Clicked"/>
+            <Button x:Name="Settings"
+                Text="Settings"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Opacity=".75"
+                CornerRadius="10"
+                Grid.Row="6"
+                Grid.Column="5"
+                BackgroundColor="White"
+                Clicked="Settings_Clicked"/>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

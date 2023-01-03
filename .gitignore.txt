@@ -1,0 +1,11 @@
+# Directories or Files to Ignore
+
+**/bin
+**/obj
+**/.vs
+
+# Due It/.vs/
+# Due It/Due It/Due It/bin
+# Due It/Due It/Due It/obj
+# Due It/Due It/Due It.Android/bin
+# Due It/Due It/Due It/obj
