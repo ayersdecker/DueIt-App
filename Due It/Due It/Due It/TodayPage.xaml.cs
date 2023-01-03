@@ -59,5 +59,10 @@ namespace Due_It
         {
             Navigation.PushAsync(new SettingsPage());
         }
+
+        private void AddButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddAssignment());
+        }
     }
 }

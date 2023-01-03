@@ -44,10 +44,27 @@
                 Grid.Column="1"
                 Grid.ColumnSpan="5">
                 
-                
+            
                 
                 
             </ScrollView>
+            <Button
+                x:Name="AddButton"
+                Text="+"
+                TextColor="LightGray"
+                FontSize="40"
+                FontAttributes="Bold"
+                Grid.Column="5"
+                Grid.ColumnSpan="2"
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                Margin="0,500,10,40"
+                HeightRequest="75"
+                WidthRequest="75"
+                CornerRadius="30"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="AddButton_Clicked"/>
             <Button
                 x:Name="Home"
                 Text="Home"
