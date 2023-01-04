@@ -137,7 +137,6 @@ namespace Due_It
                 OnPropertyChanged();
             },
             canExecute: () => true);
-
         public ICommand StartToggle => new Command(
             execute: () =>
             {
@@ -153,7 +152,6 @@ namespace Due_It
                 
             },
             canExecute: () => true);
-
         public ICommand PauseToggle => new Command(
             execute: () =>
             {
@@ -174,7 +172,6 @@ namespace Due_It
                 OnPropertyChanged();
             });
         }
-
         public ICommand ClearToggle => new Command(
             execute: () =>
             {   
@@ -188,7 +185,6 @@ namespace Due_It
             canExecute: () => true);
 
         public event PropertyChangedEventHandler PropertyChanged;
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

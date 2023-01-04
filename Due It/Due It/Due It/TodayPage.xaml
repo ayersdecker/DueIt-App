@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Cells="clr-namespace:Due_It.Cells"
              x:Class="Due_It.TodayPage">
     <ContentPage.Content
         NavigationPage.HasBackButton="False"
@@ -39,15 +39,19 @@
                        Grid.Column="1"
                        Grid.ColumnSpan="5"
                        Grid.Row="3"/>
-            <ScrollView
+            <CollectionView
                 Grid.Row="3"
                 Grid.Column="1"
-                Grid.ColumnSpan="5">
-                
-            
-                
-                
-            </ScrollView>
+                Grid.ColumnSpan="5"
+                VerticalOptions="FillAndExpand">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <Cells:AssignmentCard/>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
             <Button
                 x:Name="AddButton"
                 Text="+"
