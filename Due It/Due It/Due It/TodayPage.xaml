@@ -24,10 +24,24 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
+            <Button x:Name="ToggleToday"
+                Margin="10,0,0,0"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                Text="Today"
+                
+                
+                />
+            
+            
+            
             <Label x:Name="PageHeader"
                     Text="Today"
                    TextColor="Black"
                    FontAttributes="Bold"
+                   IsVisible="false"
                    Opacity=".75"
                    FontSize="30"
                    Grid.Column="1"

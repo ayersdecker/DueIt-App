@@ -42,7 +42,7 @@ namespace Due_It
             await database.SaveBlockItemAsync(new Block());
             await database.SaveSystemPropertiesItemAsync(new SystemProperties());
             PageHeader.Text = DateTime.Now.ToString("M");
-
+            
         }
 
         private void Home_Clicked(object sender, EventArgs e)
