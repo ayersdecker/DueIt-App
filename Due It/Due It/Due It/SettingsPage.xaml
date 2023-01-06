@@ -7,10 +7,15 @@
         Title="SettingsPage">
         <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="5"/>
+                <RowDefinition Height="5" />
                 <RowDefinition Height="45"/>
                 <RowDefinition Height="5"/>
                 <RowDefinition/>
+                <RowDefinition Height="10"/>
+                <RowDefinition/>
+                <RowDefinition Height="10"/>
+                <RowDefinition/>
+                <RowDefinition Height="2"/>
                 <RowDefinition Height="75"/>
                 <RowDefinition Height="2"/>
             </Grid.RowDefinitions>
@@ -23,6 +28,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
+            
             <Label Text="Settings"
                    TextColor="Black"
                    FontAttributes="Bold"
@@ -32,13 +38,84 @@
                    Grid.ColumnSpan="2"
                    Grid.Row="1"
                    />
+
+            <Button 
+                BackgroundColor="Gray"
+                Margin="0,0,65,0"
+                Text="Setting 1"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontSize="20"
+                />
+            <Button 
+                BackgroundColor="Gray"
+                Margin="65,0,0,0"
+                Text="Setting 2"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontSize="20"
+                />
+            <Button 
+                BackgroundColor="Gray"
+                Margin="0,0,65,0"
+                Text="Setting 3"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="5"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontSize="20"
+                />
+            <Button 
+                BackgroundColor="Gray"
+                Margin="65,0,0,0"
+                Text="Setting 4"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                Grid.Row="5"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontSize="20"
+                />
+            <Button 
+                BackgroundColor="Gray"
+                Margin="0,0,65,0"
+                Text="Setting 5"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="7"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontSize="20"
+                />
+            <Button 
+                BackgroundColor="Gray"
+                Margin="65,0,0,0"
+                Text="Setting 6"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                Grid.Row="7"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontSize="20"
+                />
+
+
+
+
             <Button x:Name="Home"
                 Text="Home"
                 TextColor="Black"
                 FontAttributes="Bold"
                 Opacity=".75"
                 CornerRadius="10"
-                Grid.Row="4"
+                Grid.Row="9"
                 Grid.Column="1"
                 BackgroundColor="White"
                 Clicked="Home_Clicked"/>
@@ -48,7 +125,7 @@
                 FontAttributes="Bold"
                 Opacity=".75"
                 CornerRadius="10"
-                Grid.Row="4"
+                Grid.Row="9"
                 Grid.Column="3"
                 BackgroundColor="White"
                 Clicked="TimerBtn_Clicked"/>
@@ -58,7 +135,7 @@
                 FontAttributes="Bold"
                 Opacity=".75"
                 CornerRadius="10"
-                Grid.Row="4"
+                Grid.Row="9"
                 Grid.Column="5"
                 BackgroundColor="LightGray"
                 Clicked="Settings_Clicked"/>

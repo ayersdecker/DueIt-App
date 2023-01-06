@@ -4,7 +4,6 @@
     <SelectedDevice>Android Emulator</SelectedDevice>
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
     <ActiveDebugProfile>Android Emulator</ActiveDebugProfile>
-    <DefaultDevice>pixel_5_-_api_33</DefaultDevice>
-    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
+    <DefaultDevice>pixel_3_xl_pie_9_0_-_api_28</DefaultDevice>
   </PropertyGroup>
 </Project>
