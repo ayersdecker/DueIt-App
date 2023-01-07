@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "MonoAndroid,Version=v12.0": {
+    "MonoAndroid,Version=v13.0": {
       "sqlite-net-pcl/1.8.116": {
         "type": "package",
         "dependencies": {
@@ -3722,7 +3722,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "MonoAndroid,Version=v12.0": [
+    "MonoAndroid,Version=v13.0": [
       "Due It >= 1.0.0",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2196"
@@ -3754,14 +3754,14 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "monoandroid12.0"
+        "monoandroid13.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "monoandroid12.0": {
+        "monoandroid13.0": {
           "projectReferences": {
             "C:\\Users\\ayers\\source\\repos\\Due It\\Due It\\Due It\\Due It\\Due It.csproj": {
               "projectPath": "C:\\Users\\ayers\\source\\repos\\Due It\\Due It\\Due It\\Due It\\Due It.csproj"
@@ -3771,7 +3771,7 @@
       }
     },
     "frameworks": {
-      "monoandroid12.0": {
+      "monoandroid13.0": {
         "dependencies": {
           "Xamarin.Essentials": {
             "target": "Package",

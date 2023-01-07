@@ -41,8 +41,7 @@ namespace Due_It
             await database.SaveCourseItemAsync(new Course());
             await database.SaveBlockItemAsync(new Block());
             await database.SaveSystemPropertiesItemAsync(new SystemProperties());
-            PageHeader.Text = DateTime.Now.ToString("M");
-            
+            ToggleToday.Text = DateTime.Now.ToString("M");
         }
 
         private void Home_Clicked(object sender, EventArgs e)
@@ -63,6 +62,20 @@ namespace Due_It
         private void AddButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AddAssignment());
+        }
+
+        private void ToggleToday_Clicked(object sender, EventArgs e)
+        {
+            DateTime currentDate = DateTime.Now;
+            DateTime oneWeekNow  = currentDate.AddDays(6);
+            if (ToggleToday.Text == DateTime.Now.ToString("M"))
+            {
+                ToggleToday.Text = currentDate.ToString("MMM") + " " + currentDate.ToString("dd") + " - " + oneWeekNow.ToString("MMM") + " " + oneWeekNow.ToString("dd");
+            }
+            else
+            {
+                ToggleToday.Text = currentDate.ToString("M");
+            }
         }
     }
 }

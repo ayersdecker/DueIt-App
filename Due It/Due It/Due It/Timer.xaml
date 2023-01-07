@@ -47,9 +47,7 @@
                    Grid.Column="1"
                    Grid.Row="1"
                    />
-            <Label x:Name="hourCollect"/>
-            <Label x:Name="minuteCollect"/>
-            
+
             <Button x:Name="HourUpButton"
                 Text="+"
                 TextColor="Black"
@@ -110,7 +108,18 @@
                 VerticalOptions="Start"
                 Command="{Binding SubMin}"
                 />
-
+            <Label x:Name="CurrentTime"
+                   Text="{Binding CurrentTime}"
+                   TextColor="Black"
+                   Opacity=".1"
+                   FontSize="100"
+                   FontAttributes="Bold"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="5"
+                   Grid.Row="3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   />
             <Label x:Name="HourTime"
                    
                    TextColor="Black"
