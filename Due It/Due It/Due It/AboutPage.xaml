@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Due_It.AboutPage">
+    <ContentPage.Content
+        NavigationPage.HasBackButton="False"
+        Title="AboutPage">
+        <Grid>
+            <WebView
+                
+                Source="https://github.com/ayersdecker/Due-It"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

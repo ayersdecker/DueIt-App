@@ -112,7 +112,7 @@
                    Text="{Binding CurrentTime}"
                    TextColor="Black"
                    Opacity=".1"
-                   FontSize="100"
+                   FontSize="90"
                    FontAttributes="Bold"
                    Grid.Column="1"
                    Grid.ColumnSpan="5"

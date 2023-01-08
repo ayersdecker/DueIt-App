@@ -84,3 +84,5 @@ C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AddEvent.xaml.g.cs
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Cells\AssignmentCard.xaml.g.cs
 C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\Cells\AssignmentCard.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AboutPage.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\CompletedPage.xaml.g.cs

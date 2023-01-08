@@ -14,7 +14,13 @@ namespace Due_It
     {
         public AddAssignment()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }

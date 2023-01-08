@@ -74,8 +74,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            <Button
-                x:Name="AddButton"
+            <Button x:Name="AddButton"
                 Text="+"
                 TextColor="LightGray"
                 FontSize="40"

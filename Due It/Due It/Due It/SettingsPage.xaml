@@ -45,11 +45,23 @@
                 Text="Add Event"
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
-                Grid.Row="3"
+                Grid.Row="5"
                 CornerRadius="25"
                 FontAttributes="Bold"
                 FontSize="20"
                 Clicked="AddEvent_Clicked"
+                />
+            <Button x:Name="AddAssignment"
+                BackgroundColor="DarkSeaGreen"
+                Margin="0,0,65,0"
+                Text="Add Assignment"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                CornerRadius="25"
+                FontAttributes="Bold"
+                FontSize="20"
+                    Clicked="AddAssignment_Clicked"
                 />
             <Button x:Name="AddCourse"
                 BackgroundColor="PaleVioletRed"
@@ -69,7 +81,7 @@
                 Text="Preferences"
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
-                Grid.Row="5"
+                Grid.Row="7"
                 CornerRadius="25"
                 FontAttributes="Bold"
                 FontSize="20"
@@ -89,9 +101,9 @@
                 />
             <Button x:Name="AboutPage"
                 BackgroundColor="MediumPurple"
-                Margin="0,0,65,0"
-                Text="About              Due It"
-                Grid.Column="1" 
+                Margin="65,0,0,0"
+                Text="Github"
+                Grid.Column="3" 
                 Grid.ColumnSpan="3"
                 Grid.Row="7"
                 CornerRadius="25"
@@ -99,18 +111,7 @@
                 FontSize="20"
                 Clicked="AboutPage_Clicked"
                 />
-            <Button 
-                BackgroundColor="Gray"
-                Margin="65,0,0,0"
-                Text="Setting 6"
-                Grid.Column="3"
-                Grid.ColumnSpan="3"
-                Grid.Row="7"
-                CornerRadius="25"
-                IsVisible="false"
-                FontAttributes="Bold"
-                FontSize="20"
-                />
+            
 
 
 

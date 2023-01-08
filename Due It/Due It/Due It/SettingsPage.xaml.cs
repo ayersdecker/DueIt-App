@@ -44,17 +44,22 @@ namespace Due_It
 
         private void Preferences_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new PreferencesPage());
         }
 
         private void Completed_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new CompletedPage());
         }
 
         private void AboutPage_Clicked(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new AboutPage());
+        }
 
+        private void AddAssignment_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AddAssignment());
         }
     }
 }

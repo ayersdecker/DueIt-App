@@ -4,9 +4,16 @@
              x:Class="Due_It.PreferencesPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label
+                Text="( ! )"
+                FontSize="90"
+                HorizontalOptions="Center"
+                Margin="0,100,0,0"/>
+            <Label
+                Text="This page is not available at this time."
+                FontSize="20"
+                HorizontalOptions="Center"
+                Margin="0,50,0,0"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
