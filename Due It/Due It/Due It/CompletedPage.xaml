@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Due_It.CompletedPage">
+    <ContentPage.Content>
+        <Grid 
+            BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="5"/>
+                <RowDefinition  Height="40"/>
+                <RowDefinition  Height="5"/>
+                <RowDefinition/>
+                <RowDefinition  Height="5"/>
+            </Grid.RowDefinitions>
+            <Button
+                Grid.Column="1"
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                Text="&lt;"
+                FontSize="20"
+                Margin="0,10,0,5"
+                FontAttributes="Bold"
+                WidthRequest="50"
+                CornerRadius="15"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Center"
+                Clicked="Button_Clicked"/>
+            <Label
+                Grid.Column="3"
+                Grid.Row="1"
+                Text="Completed Tasks"
+                TextColor="Black"
+                FontSize="30"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="End"/>
+            <ScrollView
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                BackgroundColor="LightGray"/>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

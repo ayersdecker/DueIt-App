@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Cells="clr-namespace:Due_It.Cells"
+             xmlns:local="clr-namespace:Due_It"
              x:Class="Due_It.TodayPage">
+    <ContentPage.BindingContext>
+        <local:TodayViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content
         NavigationPage.HasBackButton="False"
         Title="TodayPage">
@@ -24,16 +28,34 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="PageHeader"
-                    Text="Today"
+            <Button x:Name="ToggleToday"
+                Margin="10,5,0,0"
+                Grid.Column="0"
+                Grid.ColumnSpan="6"
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                Text="Today"
+                FontSize="25"
+                FontAttributes="Bold"
+                TextColor="Black"
+                BackgroundColor="White"
+                Clicked="ToggleToday_Clicked"
+                TextTransform="None"
+                HorizontalOptions="Start"
+                CornerRadius="15"/>
+
+
+            <Label 
+                   Text="{Binding CurrentTime}"
+                   Margin="0,5,10,0"
                    TextColor="Black"
                    FontAttributes="Bold"
                    Opacity=".75"
                    FontSize="30"
                    Grid.Column="1"
+                   HorizontalOptions="End"
                    Grid.ColumnSpan="5"
-                   Grid.Row="1"
-                   />
+                   Grid.Row="1"/>
             <!--This space below is where the current assignments will go-->
             <Rectangle BackgroundColor="LightGray" 
                        Grid.Column="1"
@@ -52,8 +74,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            <Button
-                x:Name="AddButton"
+            <Button x:Name="AddButton"
                 Text="+"
                 TextColor="LightGray"
                 FontSize="40"

@@ -21,7 +21,7 @@ namespace Due_It
             
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-            
+            CurrentTime.IsVisible= false;
             
         }
         private void Home_Clicked(object sender, EventArgs e)
@@ -70,6 +70,7 @@ namespace Due_It
                 TimerBtn.IsVisible = true;
                 Settings.IsVisible = true;
                 PageTitle.IsVisible = true;
+                CurrentTime.IsVisible = false       ;
             }
             else
             {
@@ -85,6 +86,7 @@ namespace Due_It
                 Home.IsVisible = false;
                 TimerBtn.IsVisible = false;
                 Settings.IsVisible = false;
+                CurrentTime.IsVisible= true;
             }
         }
         private void ClearButton_Clicked(object sender, EventArgs e)

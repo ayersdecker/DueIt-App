@@ -15,6 +15,10 @@ namespace Due_It
 {
     public class TimerViewModel : INotifyPropertyChanged
     {
+        private DateTime currentTime = DateTime.Now;
+
+        public string CurrentTime { get { return currentTime.ToString("h:mm tt"); } }
+
         private System.Timers.Timer _timer;
         private int secTimerInterval;
         private int minTimerInterval;

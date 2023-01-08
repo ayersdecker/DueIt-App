@@ -1,19 +1,253 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Core"
              x:Class="Due_It.AddAssignment">
     <ContentPage.Content>
         <Grid BackgroundColor="White">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="100"/>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="10"/>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition />
+                <RowDefinition Height="70"/>
                 <RowDefinition/>
+                <RowDefinition Height="5"/>
             </Grid.RowDefinitions>
+
+            <Button
+                Grid.Column="0"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Text="&lt;"
+                FontSize="20"
+                Margin="10,0,0,0"
+                FontAttributes="Bold"
+                CornerRadius="15"
+                WidthRequest="50"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="Start"
+                Clicked="Button_Clicked"/>
+
+            <Label
+                Text="Add Assignment"
+                 Margin="20,5,10,0"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Opacity=".75"
+                   FontSize="30"
+                   Grid.Column="0"
+                   HorizontalOptions="End"
+                   Grid.ColumnSpan="4"
+                   Grid.Row="1"/>
+            
+            <Label
+                Grid.Column="0"
+                Grid.Row="3"
+                Margin="15,0,0,0"
+                Text="Name/Title"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TextColor="Black"/>
+            <Entry x:Name="NameEntry"
+                Placeholder=" Type Entry Here "
+                PlaceholderColor="White"
+                Opacity=".5"
+                TextColor="White"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                WidthRequest="300"
+                HorizontalOptions="Center"
+                BackgroundColor="Black"/>
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="5"
+                Margin="15,0,0,0"
+                Text="Description"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TextColor="Black"/>
+            <Editor x:Name="DescriptionEntry"
+                Placeholder=" Type Entry Here "
+                PlaceholderColor="White"
+                Opacity=".5"
+                TextColor="White"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="5"
+                WidthRequest="300"
+                HorizontalOptions="Center"
+                BackgroundColor="Black"/>
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="7"
+                Margin="15,0,0,0"
+                Text="Course"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TextColor="Black"/>
+            <Picker x:Name="CourseEntry"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Title=" Select an Option "
+                TitleColor="White"
+                Grid.Row="7"
+                Opacity=".5"
+                BackgroundColor="Black"/>
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="9"
+                Margin="15,0,0,0"
+                Text="Due Date"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TextColor="Black"/>
+            <DatePicker x:Name="DueDateEntry"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="9"
+                Opacity=".5"
+                BackgroundColor="Black"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="11"
+                Margin="15,0,0,0"
+                Text="Time Due"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TextColor="Black"/>
+            <TimePicker
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="11"
+                BackgroundColor="Gray"/>
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="13"
+                Margin="15,0,0,0"
+                Text="Time to Complete"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TextColor="Black"/>
+            <Picker
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="13"
+                Title=" Select an Option"
+                TitleColor="White"
+                BackgroundColor="Gray"/>
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="15"
+                Margin="15,0,0,0"
+                Text="Priority"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TextColor="Black"/>
+            <RadioButton
+                Grid.Column="1"
+                Margin="0,0,40,0"
+                TextColor="White"
+                Content="Low"
+                Grid.Row="15"
+                BackgroundColor="Gray"
+                />
+            <RadioButton
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Margin="100,0,95,0"
+                TextColor="White"
+                Content="Med"
+                Grid.Row="15"
+                BackgroundColor= "Gray"/>
+            <RadioButton
+                Grid.Column="3"
+                Margin="45,0,0,0"
+                TextColor="White"
+                Content="High"
+                Grid.Row="15"
+                BackgroundColor="Gray" />
+
+            <Button x:Name="ClearButton"
+                Grid.Column="0"
+                Margin="0,0,50,0"
+                Grid.ColumnSpan="2"
+                Grid.Row="17"
+                FontSize="15"
+                FontAttributes="Bold"
+                CornerRadius="15"
+                HorizontalOptions="Center"
+                Text="Clear"
+                TextColor="White"
+                BackgroundColor="IndianRed"
+                />
+            <Button x:Name="CreateButton"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="17"
+                FontSize="20"
+                FontAttributes="Bold"
+                CornerRadius="15"
+                Margin="50,0,25,0"
+                HorizontalOptions="Center"
+                Text="Create"
+                WidthRequest="200"
+                TextColor="White"
+                BackgroundColor="MediumSeaGreen"
+                />
+
+
+
 
 
 
