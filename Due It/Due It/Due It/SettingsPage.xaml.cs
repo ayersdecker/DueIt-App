@@ -34,12 +34,12 @@ namespace Due_It
 
         private void AddEvent_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new AdjustEvents());
         }
 
         private void AddCourse_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new AdjustCourses());
         }
 
         private void Preferences_Clicked(object sender, EventArgs e)

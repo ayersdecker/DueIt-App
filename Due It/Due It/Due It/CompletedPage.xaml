@@ -35,7 +35,7 @@
             <Label
                 Grid.Column="3"
                 Grid.Row="1"
-                Text="Completed Tasks"
+                Text="Completed Works"
                 TextColor="Black"
                 FontSize="30"
                 FontAttributes="Bold"
