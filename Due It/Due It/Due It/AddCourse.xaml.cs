@@ -14,7 +14,23 @@ namespace Due_It
     {
         public AddCourse()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+        }
+
+        private void BackButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
+        private void AddClassButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RemoveClassButton_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
