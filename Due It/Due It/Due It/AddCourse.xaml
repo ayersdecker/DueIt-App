@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Due_It.AddCourse">
     <ContentPage.Content>
-        <Grid BackgroundColor="White">
+        <Grid x:Name="MainPage" BackgroundColor="White">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition/>
@@ -48,6 +48,7 @@
                 HorizontalOptions="Start"
                 Clicked="BackButton_Clicked"/>
             <Label
+                x:Name="but1"
                 Text="Add Course"
                  Margin="20,5,10,0"
                    TextColor="Black"
@@ -58,8 +59,9 @@
                    HorizontalOptions="End"
                    Grid.ColumnSpan="4"
                    Grid.Row="1"/>
-            
+
             <Label
+                x:Name="but2"
                 Grid.Column="0"
                 Grid.Row="3"
                 Margin="15,0,0,0"
@@ -81,8 +83,8 @@
                 WidthRequest="300"
                 HorizontalOptions="Center"
                 BackgroundColor="Black"/>
-
             <Label
+                x:Name="but3"
                 Grid.Column="0"
                 Grid.Row="5"
                 Margin="15,0,0,0"
@@ -104,8 +106,8 @@
                 WidthRequest="300"
                 HorizontalOptions="Center"
                 BackgroundColor="Black"/>
-
             <Label
+                x:Name="but4"
                 Grid.Column="0"
                 Grid.Row="7"
                 Margin="15,0,0,0"
@@ -123,8 +125,8 @@
                 Grid.Row="7"
                 Opacity=".5"
                 BackgroundColor="Black"/>
-
             <Label
+                x:Name="but5"
                 Grid.Column="0"
                 Grid.Row="9"
                 Margin="15,0,0,0"
@@ -145,8 +147,8 @@
                 BackgroundColor="Black"
                 HorizontalOptions="Center"
                 WidthRequest="300"/>
-
             <Label
+                x:Name="but6"
                 Grid.Column="0"
                 Grid.Row="11"
                 Margin="15,0,0,0"
@@ -163,8 +165,8 @@
                    Placeholder=" Type Name Here"
                 Grid.Row="11"
                 BackgroundColor="Gray"/>
-
             <Label
+                x:Name="but7"
                 Grid.Column="0"
                 Grid.Row="13"
                 Margin="15,0,0,0"
@@ -207,9 +209,6 @@
                 HorizontalOptions="End"
                 CornerRadius="10"
                 Clicked="RemoveClassButton_Clicked"/>
-
-
-
             <Button x:Name="ClearButton"
                 Grid.Column="0"
                 Margin="0,0,50,0"
@@ -236,9 +235,112 @@
                 WidthRequest="200"
                 TextColor="White"
                 BackgroundColor="MediumSeaGreen"
+                /> 
+            
+            <Label
+                x:Name="add1"
+                Grid.Column="0"
+                Grid.Row="3"
+                Margin="15,0,0,0"
+                Text="Start Time"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TextColor="Black"/>
+            <Entry x:Name="addStartEntry"
+                Placeholder=" Military Time "
+                PlaceholderColor="White"
+                Keyboard="Numeric"
+                Opacity=".5"
+                TextColor="White"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="3"
+                WidthRequest="300"
+                HorizontalOptions="Center"
+                BackgroundColor="Black"/>
+            <Label
+                x:Name="add2"
+                Grid.Column="0"
+                Grid.Row="5"
+                Margin="15,0,0,0"
+                Text="End Time"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                TextColor="Black"/>
+            <Entry x:Name="addEndEntry"
+                Placeholder=" Military Time "
+                PlaceholderColor="White"
+                Keyboard="Numeric"
+                Opacity=".5"
+                TextColor="White"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="5"
+                HeightRequest="50"
+                WidthRequest="300"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                BackgroundColor="Black"/>
+            <Label
+                x:Name="add3"
+                Grid.Column="0"
+                Grid.Row="5"
+                Grid.RowSpan="2"
+                Margin="15,70,0,0"
+                Text="Start Time"
+                FontSize="15"
+                FontAttributes="Bold"
+                Opacity=".75"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                TextColor="Black"/>
+            <Picker x:Name="dayPicker"
+               Background="Gray"
+               Grid.Column="1"
+               Margin="0,70,0,0"
+               Grid.ColumnSpan="3"
+               Grid.Row="5"
+               Grid.RowSpan="3"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               />
+            <Button x:Name="addClearButton"
+                Grid.Column="0"
+                Margin="0,0,50,0"
+                Grid.ColumnSpan="2"
+                Grid.Row="17"
+                FontSize="15"
+                FontAttributes="Bold"
+                CornerRadius="15"
+                HorizontalOptions="Center"
+                Text="Clear"
+                TextColor="White"
+                BackgroundColor="IndianRed"
+                />
+            <Button x:Name="addCreateButton"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Grid.Row="17"
+                FontSize="20"
+                FontAttributes="Bold"
+                CornerRadius="15"
+                Margin="50,0,25,0"
+                HorizontalOptions="Center"
+                Text="Create"
+                WidthRequest="200"
+                TextColor="White"
+                BackgroundColor="MediumSeaGreen"
                 />
 
 
         </Grid>
+
+
     </ContentPage.Content>
 </ContentPage>
