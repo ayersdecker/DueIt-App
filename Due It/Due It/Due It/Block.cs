@@ -15,14 +15,26 @@ namespace Due_It
 
         [PrimaryKey, AutoIncrement]
         public int? ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public RepeatPeriod Repeat { get; set; }
+        //public List<Monad> Schedule { get; set; }
 
         public Block()
         {
             ID = 0;
+            Name = "Not Available";
+            Description = "Not Available";
+            Repeat = RepeatPeriod.never;
+            //Schedule = new List<Monad>();
         }
-        public Block(int? iD)
+        public Block(int? iD, string name, string description, RepeatPeriod repeat /*List<Monad> schedule*/)
         {
             ID = iD;
+            Name = name;
+            Description = description;
+            Repeat = repeat;
+            //Schedule = schedule;
         }
     }
  
