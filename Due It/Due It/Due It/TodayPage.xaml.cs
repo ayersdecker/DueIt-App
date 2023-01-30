@@ -11,8 +11,11 @@ using Xamarin.Forms.Xaml;
 namespace Due_It
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
+    
     public partial class TodayPage : ContentPage
     {
+
         public List<Assignment> assignmentsToday;
         public List<Course> coursesToday;
         public List<Block> blocksToday;
@@ -48,22 +51,18 @@ namespace Due_It
         {
             Navigation.PushAsync(new TodayPage());
         }
-
         private void Timer_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Timer());
         }
-
         private void Settings_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new SettingsPage());
         }
-
         private void AddButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AddAssignment());
         }
-
         private void ToggleToday_Clicked(object sender, EventArgs e)
         {
             DateTime currentDate = DateTime.Now;
@@ -77,5 +76,14 @@ namespace Due_It
                 ToggleToday.Text = currentDate.ToString("M");
             }
         }
+        private void TodayAndWeekViewLoad() 
+        { 
+            
+        }
+        public void AssignmentAdd(Assignment assignment)
+        {
+            assignmentsToday.Add(assignment);
+        }
+
     }
 }

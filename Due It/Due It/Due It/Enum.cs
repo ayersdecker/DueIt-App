@@ -21,6 +21,12 @@ namespace Due_It
         threehour,      //7
         fourhour        //8
     }
+    public enum RepeatPeriod
+    {
+        never,
+        daily,
+        weekly
+    }
 
     //
     // This ENUM is meant to signify different fifteen minute intervals throughout the day according to military time.

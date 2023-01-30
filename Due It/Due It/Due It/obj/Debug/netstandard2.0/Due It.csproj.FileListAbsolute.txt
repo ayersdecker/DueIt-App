@@ -90,3 +90,5 @@ C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\CompletedPage.xaml.g.cs
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AdjustCourses.xaml.g.cs
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AdjustEvents.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AdjustCourses.xaml.g.cs
+C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It\obj\Debug\netstandard2.0\AdjustEvents.xaml.g.cs
