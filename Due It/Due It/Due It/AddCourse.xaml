@@ -141,7 +141,7 @@
                 Keyboard="Numeric"
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
-                   Placeholder=" Type Section Here"
+                Placeholder=" Type Section Here"
                 Grid.Row="9"
                 Opacity=".5"
                 BackgroundColor="Black"
@@ -235,8 +235,8 @@
                 WidthRequest="200"
                 TextColor="White"
                 BackgroundColor="MediumSeaGreen"
-                /> 
-            
+                Clicked="CreateButton_Clicked"/>
+
             <Label
                 x:Name="add1"
                 Grid.Column="0"

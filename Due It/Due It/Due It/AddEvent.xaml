@@ -162,8 +162,12 @@
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
                 Grid.Row="11"
-                BackgroundColor="Gray"
-                />
+                BackgroundColor="Gray">
+                <Picker.Items>
+                    <x:String>None</x:String>
+                    <x:String>Weekly</x:String>
+                </Picker.Items>
+            </Picker>
 
 
 
@@ -193,6 +197,7 @@
                 WidthRequest="200"
                 TextColor="White"
                 BackgroundColor="MediumSeaGreen"
+                Clicked="CreateButton_Clicked"
                 />
 
 

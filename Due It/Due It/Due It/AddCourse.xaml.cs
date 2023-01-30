@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static Xamarin.Essentials.Permissions;
 
 namespace Due_It
 {
@@ -97,6 +98,45 @@ namespace Due_It
                 addClearButton.IsVisible = true;
                 addCreateButton.IsVisible = true;
             }
+        }
+
+
+
+        private void CreateButton_Clicked(object sender, EventArgs e)
+        {
+            if (FormValidated())
+            {
+                // Instance of Database to store new Course
+                var database = new Database();
+
+                // Create Default Const.
+                Course course = new Course();
+
+                // Add parameters into Default Const.
+                course.Name = NameEntry.Text;
+                course.Description = DescriptionEntry.Text;
+                course.CourseCode = CodeEntry.Text;
+                course.Section = double.Parse(SectionEntry.Text);
+                course.Instructor = ProfessorEntry.Text;
+
+                // Call method to store new Course
+                _ = database.SaveCourseItemAsync(course);
+
+                Navigation.PopAsync();
+            }
+        }
+        private bool FormValidated()
+        {
+            bool result = true;
+            
+            if (NameEntry.Text == "" || NameEntry.Text == null) { result = false; }
+            if (DescriptionEntry.Text == "" || DescriptionEntry.Text == null) { result = false; }
+            if (CodeEntry.Text == "" || CodeEntry.Text == null) { result = false; }
+            if (SectionEntry.Text == "" || SectionEntry.Text == null) { result = false; }
+            if (ProfessorEntry.Text == "" || ProfessorEntry.Text == null) { result = false; }
+
+            return result;
+
         }
     }
 }

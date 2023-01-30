@@ -125,7 +125,15 @@
                 TitleColor="White"
                 Grid.Row="7"
                 Opacity=".5"
-                BackgroundColor="Black"/>
+                BackgroundColor="Black">
+                <Picker.Items>
+                    <x:String>Course 1</x:String>
+                    <x:String>Course 2</x:String>
+                    <x:String>Course 3</x:String>
+                    <x:String>Course 4</x:String>
+                    <x:String>Course 5</x:String>
+                </Picker.Items>
+            </Picker>
 
             <Label
                 Grid.Column="0"
@@ -158,7 +166,7 @@
                 HorizontalOptions="Start"
                 VerticalOptions="Start"
                 TextColor="Black"/>
-            <TimePicker
+            <TimePicker x:Name="DueTimeEntry"
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
                 Grid.Row="11"
@@ -176,12 +184,24 @@
                 VerticalOptions="Start"
                 TextColor="Black"/>
             <Picker
+                x:Name="TimeToComplete"
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
                 Grid.Row="13"
                 Title=" Select an Option"
                 TitleColor="White"
-                BackgroundColor="Gray"/>
+                BackgroundColor="Gray">
+                <Picker.Items>
+                    <x:String>15 Minutes</x:String>
+                    <x:String>30 Minutes</x:String>
+                    <x:String>1 Hour</x:String>
+                    <x:String>2 Hours</x:String>
+                    <x:String>3 Hours</x:String>
+                    <x:String>4 Hours</x:String>
+                    <x:String>5 Hours</x:String>
+                    <x:String>6+ Hours</x:String>
+                </Picker.Items>
+            </Picker>
 
             <Label
                 Grid.Column="0"
@@ -194,7 +214,7 @@
                 HorizontalOptions="Start"
                 VerticalOptions="Start"
                 TextColor="Black"/>
-            <RadioButton
+            <RadioButton x:Name="Low"
                 Grid.Column="1"
                 Margin="0,0,40,0"
                 TextColor="White"
@@ -202,7 +222,7 @@
                 Grid.Row="15"
                 BackgroundColor="Gray"
                 />
-            <RadioButton
+            <RadioButton x:Name="Medium"
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
                 Margin="100,0,95,0"
@@ -210,7 +230,7 @@
                 Content="Med"
                 Grid.Row="15"
                 BackgroundColor= "Gray"/>
-            <RadioButton
+            <RadioButton x:Name="High"
                 Grid.Column="3"
                 Margin="45,0,0,0"
                 TextColor="White"
@@ -244,6 +264,7 @@
                 WidthRequest="200"
                 TextColor="White"
                 BackgroundColor="MediumSeaGreen"
+                Clicked="CreateButton_Clicked"
                 />
 
 

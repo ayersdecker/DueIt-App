@@ -17,7 +17,7 @@ namespace Due_It
         public int? ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public RepeatPeriod Repeat { get; set; }
+        public int Repeat { get; set; }
         //public List<Monad> Schedule { get; set; }
 
         public Block()
@@ -25,10 +25,10 @@ namespace Due_It
             ID = 0;
             Name = "Not Available";
             Description = "Not Available";
-            Repeat = RepeatPeriod.never;
+            Repeat = 0;
             //Schedule = new List<Monad>();
         }
-        public Block(int? iD, string name, string description, RepeatPeriod repeat /*List<Monad> schedule*/)
+        public Block(int? iD, string name, string description, int repeat /*List<Monad> schedule*/)
         {
             ID = iD;
             Name = name;
