@@ -27,6 +27,8 @@ namespace Due_It
             InitializeComponent();
             LoadUp();
             //CalendarLoad();
+            ScheduleView.ItemsSource = assignmentsToday;
+            
         }
         async void CalendarLoad()
         {
