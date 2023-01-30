@@ -16,7 +16,8 @@ namespace Due_It
     public partial class TodayPage : ContentPage
     {
 
-        public List<Assignment> assignmentsToday;
+        public List<Assignment> assignmentsToday = new List<Assignment>();
+        public ObservableCollection<Assignment> todayRoster = new ObservableCollection<Assignment>();
         public List<Course> coursesToday;
         public List<Block> blocksToday;
         public List<SystemProperties> systemPropertiesToday;
@@ -24,11 +25,17 @@ namespace Due_It
         public TodayPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
+            var database = new Database();
+            
             InitializeComponent();
             LoadUp();
-            //CalendarLoad();
-            ScheduleView.ItemsSource = assignmentsToday;
-            
+            CalendarLoad();
+            foreach(Assignment assignment1 in assignmentsToday)
+            {
+                todayRoster.Add(assignment1);
+            }
+            this.ScheduleView.ItemsSource = todayRoster;
+
         }
         async void CalendarLoad()
         {
@@ -47,6 +54,10 @@ namespace Due_It
             await database.SaveBlockItemAsync(new Block());
             await database.SaveSystemPropertiesItemAsync(new SystemProperties());
             ToggleToday.Text = DateTime.Now.ToString("M");
+
+
+            
+
         }
 
         private void Home_Clicked(object sender, EventArgs e)
@@ -78,10 +89,7 @@ namespace Due_It
                 ToggleToday.Text = currentDate.ToString("M");
             }
         }
-        private void TodayAndWeekViewLoad() 
-        { 
-            
-        }
+        
         public void AssignmentAdd(Assignment assignment)
         {
             assignmentsToday.Add(assignment);

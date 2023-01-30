@@ -70,7 +70,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout HeightRequest="100">
-                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Name}" TextColor="Black"/>
                                 <Label Text="{Binding Description}" />
                                 <Label Text="{Binding Time, StringFormat='{0:MM/dd/yyyy hh:mm tt}'}" />
                             </StackLayout>

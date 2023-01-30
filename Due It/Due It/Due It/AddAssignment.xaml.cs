@@ -25,7 +25,7 @@ namespace Due_It
             Navigation.PopAsync();
         }
 
-        private void CreateButton_Clicked(object sender, EventArgs e)
+        private async void CreateButton_Clicked(object sender, EventArgs e)
         {
             if (FormValidated())
             {   
@@ -44,9 +44,11 @@ namespace Due_It
                 assignment.AsnCompletionTime = TimeToComplete.SelectedIndex;
 
                 // Call method to store new Assignment
-                _ = database.SaveAssignmentItemAsync(assignment);
+                await database.SaveAssignmentItemAsync(assignment);
 
-                Navigation.PopAsync();
+                
+                await Navigation.PopAsync();
+
             }
         }
         private bool FormValidated()

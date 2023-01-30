@@ -643,6 +643,7 @@ C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It.Android\obj\Debug\130\st
 C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\ayers\source\repos\Due It\Due It\Due It\Due It.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\130\android\assets\mscorlib.pdb
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\bin\Debug\Due It.Android.dll
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\bin\Debug\Due It.Android.pdb
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\bin\Debug\com.companyname.due_it.apk
@@ -725,7 +726,6 @@ C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\130\an
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\130\android\assets\Mono.Security.dll
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\130\android\assets\Mono.Security.pdb
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\130\android\assets\mscorlib.dll
-C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\130\android\assets\mscorlib.pdb
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\130\android\assets\netstandard.dll
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\130\android\assets\SQLite-net.dll
 C:\Users\draye\source\repos\Due-It\Due It\Due It\Due It.Android\obj\Debug\130\android\assets\SQLitePCLRaw.batteries_v2.dll
