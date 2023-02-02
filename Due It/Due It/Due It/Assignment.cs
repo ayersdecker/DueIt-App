@@ -31,7 +31,7 @@ namespace Due_It
             TimeRemaining = CompletionTime.fifteen;
 
         }
-        public Assignment(int? iD, string name, string course, DateTime date, TimeSpan time, string description, Priority priority, int asCompletionTime, TimeSlot slotStart, TimeSlot slotEnd, CompletionTime timeRemaining)
+        public Assignment(int? iD, string name, string course, DateTime date, TimeSpan time, string description, Priority priority, int asCompletionTime, CompletionTime timeRemaining)
         {
             ID = iD;
             Name = name;

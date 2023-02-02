@@ -183,6 +183,7 @@
                 Text="Clear"
                 TextColor="White"
                 BackgroundColor="IndianRed"
+                Clicked="ClearButton_Clicked"
                 />
             <Button x:Name="CreateButton"
                 Grid.Column="1"
