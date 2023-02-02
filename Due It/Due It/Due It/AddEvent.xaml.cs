@@ -55,5 +55,10 @@ namespace Due_It
             return result;
 
         }
+
+        private void ClearButton_Clicked(object sender, EventArgs e)
+        {
+            NameEntry.
+        }
     }
 }
