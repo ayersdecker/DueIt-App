@@ -9,5 +9,7 @@ namespace Due_It
         private DateTime currentTime = DateTime.Now;
 
         public string CurrentTime { get { return currentTime.ToString("h:mm tt"); } }
+
+        
     }
 }

@@ -10,7 +10,7 @@
                 HorizontalOptions="Center"
                 Margin="0,100,0,0"/>
             <Label
-                Text="This page is not available at this time."
+                Text="PAGE NOT FOUND"
                 FontSize="20"
                 HorizontalOptions="Center"
                 Margin="0,50,0,0"/>

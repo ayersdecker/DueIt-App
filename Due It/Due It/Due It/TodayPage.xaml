@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Cells="clr-namespace:Due_It.Cells"
-             xmlns:local="clr-namespace:Due_It"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Due_It.TodayPage">
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <local:TodayViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     <ContentPage.Content
         NavigationPage.HasBackButton="False"
         Title="TodayPage">
@@ -45,8 +44,8 @@
                 CornerRadius="15"/>
 
 
-            <Label 
-                   Text="{Binding CurrentTime}"
+            <Label x:Name="Time"
+                   Text=""
                    Margin="0,5,10,0"
                    TextColor="Black"
                    FontAttributes="Bold"
@@ -57,27 +56,27 @@
                    Grid.ColumnSpan="5"
                    Grid.Row="1"/>
             <!--This space below is where the current assignments will go-->
-            <Rectangle BackgroundColor="LightGray" 
-                       Grid.Column="1"
-                       Grid.ColumnSpan="5"
-                       Grid.Row="3"/>
+
+
+
             <CollectionView x:Name="ScheduleView"
                 Grid.Row="3"
+                Grid.RowSpan="1"
                 Grid.Column="1"
                 Grid.ColumnSpan="5"
                 VerticalOptions="FillAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <StackLayout HeightRequest="100">
-                                <Label Text="{Binding Name}" TextColor="Black"/>
-                                <Label Text="{Binding Description}" />
-                                <Label Text="{Binding Time, StringFormat='{0:MM/dd/yyyy hh:mm tt}'}" />
-                            </StackLayout>
-                        </ViewCell>
+                        <StackLayout 
+                            Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="{Binding Name}" TextColor="Black"/>
+                            <Label Text="{Binding Description}" TextColor="Black"/>
+                        </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            
+            
             <Button x:Name="AddButton"
                 Text="+"
                 TextColor="LightGray"

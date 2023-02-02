@@ -15,6 +15,7 @@ namespace Due_It
         public PreferencesPage()
         {
             InitializeComponent();
+            DisplayAlert("Oops", "Sorry, but this page is not available at this time", "Ok");
         }
     }
 }
