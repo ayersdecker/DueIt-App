@@ -18,22 +18,25 @@ namespace Due_It
 
         public List<Assignment> assignmentsToday = new List<Assignment>();
         public ObservableCollection<Assignment> todayRoster = new ObservableCollection<Assignment>();
+        public ObservableCollection<Assignment> toBeLoaded = new ObservableCollection<Assignment>();
         public List<Course> coursesToday;
         public List<Block> blocksToday;
         public List<SystemProperties> systemPropertiesToday;
 
         public TodayPage()
         {
-            todayRoster.Clear();
+            
             _ = AssignRoster();
             NavigationPage.SetHasNavigationBar(this, false);
-            
+            TodayAssignmentQuery(todayRoster);
             InitializeComponent();
-            LoadUp();
-            CalendarLoad();
+            //LoadUp();
+            //CalendarLoad();
             Time.Text = DateTime.Now.ToString("h:mm tt");
-            ObservableCollection<Assignment> Boobl = todayRoster;
-            BindingContext = this;
+            todayRoster = AssignmentSampleList();
+            toBeLoaded = TodayAssignmentQuery(todayRoster);
+            ObservableCollection<Assignment> Boobl = toBeLoaded;
+            BindingContext = this; 
             ScheduleView.ItemsSource = Boobl;
         }
         async void CalendarLoad()
@@ -71,6 +74,35 @@ namespace Due_It
         {
             Navigation.PushAsync(new AddAssignment());
         }
+        public ObservableCollection<Assignment> TodayAssignmentQuery(ObservableCollection<Assignment> assignmentItems)
+        {
+            ObservableCollection<Assignment> result = new ObservableCollection<Assignment>();
+            foreach (var assignmentItem in assignmentItems)
+            {
+                if (assignmentItem.ScheduledTime.Date == DateTime.Today.Date) { result.Add(assignmentItem);  }
+            }
+            
+            return result;
+        }
+        private ObservableCollection<Assignment> WeekAssignmentQuery(ObservableCollection<Assignment> assignmentItems)
+        {
+            ObservableCollection<Assignment> result = new ObservableCollection<Assignment>();
+            foreach (var assignmentItem in assignmentItems)
+            {
+                if (assignmentItem.ScheduledTime.Date >= DateTime.Today.Date && assignmentItem.ScheduledTime.Date <= DateTime.Today.AddDays(7)) { result.Add(assignmentItem); }
+            }
+
+            return result;
+        }
+        private ObservableCollection<Assignment> AssignmentSampleList()
+        {
+            ObservableCollection<Assignment> assignment = new ObservableCollection<Assignment>();
+            assignment.Add(new Assignment() { Name = "Homework 1", Course = "Science", Priority = Priority.low, DueDate = DateTime.Today.AddDays(4), ScheduledTime = DateTime.Today });
+            assignment.Add(new Assignment() { Name = "Homework 2", Course = "Science", Priority = Priority.low, DueDate = DateTime.Today.AddDays(1), ScheduledTime = DateTime.Today });
+            assignment.Add(new Assignment() { Name = "Project 1", Course = "History", Priority = Priority.medium, DueDate = DateTime.Today.AddDays(3), ScheduledTime = DateTime.Today});
+            assignment.Add(new Assignment() { Name = "ICE 04", Course = "PF 1", Priority = Priority.low, DueDate = DateTime.Today.AddDays(1), ScheduledTime = DateTime.Today.AddDays(1)});
+            return assignment;
+        }
         private void ToggleToday_Clicked(object sender, EventArgs e)
         {
             DateTime currentDate = DateTime.Now;
@@ -78,10 +110,14 @@ namespace Due_It
             if (ToggleToday.Text == DateTime.Now.ToString("M"))
             {
                 ToggleToday.Text = currentDate.ToString("MMM") + " " + currentDate.ToString("dd") + " - " + oneWeekNow.ToString("MMM") + " " + oneWeekNow.ToString("dd");
+                toBeLoaded.Clear();
+                toBeLoaded = WeekAssignmentQuery(todayRoster);
             }
             else
             {
                 ToggleToday.Text = currentDate.ToString("M");
+                toBeLoaded.Clear();
+                toBeLoaded = TodayAssignmentQuery(todayRoster);
             }
         }
         public void AssignmentAdd(Assignment assignment)
@@ -103,5 +139,13 @@ namespace Due_It
             await database.SaveAssignmentItemAsync(assignment);
             await AssignRoster();
         }
+
+        private void ScheduleView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string[] options = new string[] { "Start Timer", "Incomplete", "Completed" };
+            var result = DisplayActionSheet(ScheduleView.SelectedItem.ToString(), "Cancel", "", options);
+            if(result.ToString() == options[2]) { toBeLoaded.Remove((Assignment)ScheduleView.SelectedItem); ScheduleView.ItemsSource = toBeLoaded; }
+        }
+
     }
 }

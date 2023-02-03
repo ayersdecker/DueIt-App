@@ -6,7 +6,7 @@ namespace Due_It
     {
         none,       // 0
         low,        // 1
-        mediumm,    // 2
+        medium,    // 2
         high        // 3
     }
     public enum CompletionTime

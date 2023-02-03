@@ -43,13 +43,50 @@
                 FontAttributes="Bold"
                 Opacity=".75"
                 HorizontalOptions="End"/>
-            
-            <ScrollView
+
+            <CollectionView x:Name="CourseView"
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
                 Grid.Row="3"
-                BackgroundColor="LightGray"/>
-            
+                BackgroundColor="LightGray">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            CornerRadius="15"
+                            HasShadow="True"
+                            BorderColor="Gray">
+                            <Grid HeightRequest="100">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="2"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="2"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="2"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2.5"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="2.5"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="2.5"/>
+                                </Grid.ColumnDefinitions>
+                                <Label 
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="3"
+                                    Text="{Binding Name}" 
+                                    FontAttributes="Bold"
+                                    TextColor="Black" 
+                                    FontSize="Large"/>
+
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
             <Button x:Name="AddButton"
                 Text="+"
                 TextColor="LightGray"

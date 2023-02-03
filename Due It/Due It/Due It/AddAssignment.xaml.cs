@@ -11,13 +11,21 @@ using Xamarin.Forms.Xaml;
 
 namespace Due_It
 {
+    
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddAssignment : ContentPage
     {
+        
         public AddAssignment()
         {
+            List<Course> courses = new List<Course>();
+            courses.Add(new Course() { Name = "Science"});
+            courses.Add(new Course() { Name = "History"});
+            courses.Add(new Course() { Name = "PF 1" });
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+            BindingContext = this;
+            CourseEntry.ItemsSource= courses;
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -36,7 +44,6 @@ namespace Due_It
                 Assignment assignment = new Assignment();
 
                 // Add parameters into Default Const.
-                assignment.ID = await database.CountAssignment();
                 assignment.Name = NameEntry.Text;
                 assignment.Description = DescriptionEntry.Text;
                 assignment.Course = CourseEntry.SelectedIndex.ToString(); //TODO Connect ID to courseID
@@ -47,6 +54,8 @@ namespace Due_It
                 // Call method to store new Assignment
                 await database.SaveAssignmentItemAsync(assignment);
                 TodayPage todayPage = new TodayPage();
+                todayPage.todayRoster.Add(assignment);
+                todayPage.toBeLoaded = todayPage.TodayAssignmentQuery(todayPage.todayRoster);
                 await todayPage.SaveThisAssignmentAsync(assignment);
                 await Navigation.PushAsync(todayPage); 
 
@@ -82,6 +91,10 @@ namespace Due_It
             Low.IsChecked = false;
             Medium.IsChecked = false;
             High.IsChecked = false;
+        }
+        public async Task<List<Course>> LoadCoursesAsync()
+        {
+            return await new Database().GetCourseItemsAsync();
         }
     }
 }

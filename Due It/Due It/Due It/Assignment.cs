@@ -16,22 +16,25 @@ namespace Due_It
         public string Description { get; set; }
         public Priority Priority { get; set; }
         public int AsnCompletionTime { get; set; }
+        public DateTime ScheduledTime { get; set; }
+        public string DueDateString { get { return DueDate.ToShortDateString(); } }
         
         public CompletionTime TimeRemaining { get; set; }
         public Assignment()
         {
             ID = 0;
-            Name = "Not Available";
-            Course = "Not Available";
-            DueDate = DateTime.Today;
-            Description = "Not Available";
+            Name = "[Name/Title Box]";
+            Course = "[Course Box]";
+            DueDate = DateTime.Today.Date;
+            Description = "[Description Box]";
             Priority = Priority.none;
             AsnCompletionTime = 0;
             DueTime = TimeSpan.FromHours(0);
+            ScheduledTime = DateTime.Today;
             TimeRemaining = CompletionTime.fifteen;
 
         }
-        public Assignment(int? iD, string name, string course, DateTime date, TimeSpan time, string description, Priority priority, int asCompletionTime, CompletionTime timeRemaining)
+        public Assignment(int? iD, string name, string course, DateTime date, TimeSpan time, string description, Priority priority, DateTime scheduled, int asCompletionTime, CompletionTime timeRemaining)
         {
             ID = iD;
             Name = name;
@@ -40,10 +43,15 @@ namespace Due_It
             DueTime = time;
             Description = description;
             Priority = priority;
+            ScheduledTime = scheduled;
             AsnCompletionTime = asCompletionTime;
             TimeRemaining = timeRemaining;
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
         public CompletionTime ChunkRemaining()
         {
             return TimeRemaining;
