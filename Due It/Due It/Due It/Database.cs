@@ -52,6 +52,7 @@ namespace Due_It
         public Task<List<Assignment>> GetAssignmentItemsAsync()
         {
             return connection.Table<Assignment>().ToListAsync();
+            //return connection.Table<Assignment>().ToListAsync();
         }
         /// <summary>
         /// ASYNC Method to return all items stored within the Courses Table as a Task List
@@ -168,6 +169,10 @@ namespace Due_It
             if (block.ID == null)
                 return await connection.InsertAsync(block);
             return await connection.UpdateAsync(block);
+        }
+        public async Task<int> CountAssignment()
+        {
+            return await connection.Table<Assignment>().CountAsync();
         }
         /// <summary>
         /// Saves SystemProperties Item ASYNC to the SystemProperties table if exists or not

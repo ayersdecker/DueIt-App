@@ -43,6 +43,10 @@ namespace Due_It
 
                 Navigation.PopAsync();
             }
+            else
+            {
+                DisplayAlert("Error", "Please fill out all fields", "OK");
+            }
         }
         private bool FormValidated()
         {
@@ -58,7 +62,9 @@ namespace Due_It
 
         private void ClearButton_Clicked(object sender, EventArgs e)
         {
-            NameEntry.
+            NameEntry.Text = "";
+            DescriptionEntry.Text = "";
+            RepeatPicker.SelectedIndex = -1;
         }
     }
-}
+} 

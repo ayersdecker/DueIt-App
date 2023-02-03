@@ -24,18 +24,17 @@ namespace Due_It
 
         public TodayPage()
         {
+            todayRoster.Clear();
+            _ = AssignRoster();
             NavigationPage.SetHasNavigationBar(this, false);
-            var database = new Database();
             
             InitializeComponent();
             LoadUp();
             CalendarLoad();
-            foreach(Assignment assignment1 in assignmentsToday)
-            {
-                todayRoster.Add(assignment1);
-            }
-            this.ScheduleView.ItemsSource = todayRoster;
-
+            Time.Text = DateTime.Now.ToString("h:mm tt");
+            ObservableCollection<Assignment> Boobl = todayRoster;
+            BindingContext = this;
+            ScheduleView.ItemsSource = Boobl;
         }
         async void CalendarLoad()
         {
@@ -44,7 +43,7 @@ namespace Due_It
             coursesToday = await database.GetCourseItemsAsync();
             blocksToday = await database.GetBlockItemsAsync();
             systemPropertiesToday = await database.GetSystemPropertiesItemsAsync();
-            
+            ToggleToday.Text = DateTime.Now.ToString("M");
         }
         async void LoadUp()
         {
@@ -53,13 +52,9 @@ namespace Due_It
             await database.SaveCourseItemAsync(new Course());
             await database.SaveBlockItemAsync(new Block());
             await database.SaveSystemPropertiesItemAsync(new SystemProperties());
-            ToggleToday.Text = DateTime.Now.ToString("M");
-
-
             
 
         }
-
         private void Home_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new TodayPage());
@@ -89,11 +84,24 @@ namespace Due_It
                 ToggleToday.Text = currentDate.ToString("M");
             }
         }
-        
         public void AssignmentAdd(Assignment assignment)
         {
-            assignmentsToday.Add(assignment);
+            todayRoster.Add(assignment);
         }
-
+        public async Task AssignRoster()
+        {
+            var database = new Database();
+            List<Assignment> assignmentsToday = await database.GetAssignmentItemsAsync();
+            foreach (Assignment assignment in assignmentsToday)
+            {
+                todayRoster.Add(assignment);
+            }
+        }
+        public async Task SaveThisAssignmentAsync(Assignment assignment)
+        {
+            var database = new Database();
+            await database.SaveAssignmentItemAsync(assignment);
+            await AssignRoster();
+        }
     }
 }
