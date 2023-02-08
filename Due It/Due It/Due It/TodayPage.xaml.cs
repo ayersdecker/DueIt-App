@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+//
+//  Decker Ayers
+//  Due It Application 
+//  Fall 2022
+//
+
 
 namespace Due_It
 {
@@ -35,9 +41,9 @@ namespace Due_It
             Time.Text = DateTime.Now.ToString("h:mm tt");
             todayRoster = AssignmentSampleList();
             toBeLoaded = TodayAssignmentQuery(todayRoster);
-            ObservableCollection<Assignment> Boobl = toBeLoaded;
+            ObservableCollection<Assignment> Bobble = toBeLoaded;
             BindingContext = this; 
-            ScheduleView.ItemsSource = Boobl;
+            ScheduleView.ItemsSource = Bobble;
         }
         async void CalendarLoad()
         {
